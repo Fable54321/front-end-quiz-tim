@@ -1,6 +1,6 @@
 
 import { Outlet } from 'react-router-dom'
-import styles from './root.module.css'
+import styles from './Root.module.css'
 import { quizzContext } from '../../../Contexts/quizzContext'
 import { useContext } from 'react'
 import html from '../../../images/icon-html.svg'
