@@ -1,0 +1,33 @@
+@use "../../Styles/abstracts/variables" as *;
+
+
+
+.container {
+    padding-inline: $sz-240;
+    background-color: $clr-neutral-200;
+    background-image: url('../../images/pattern-background-mobile-light.svg');
+    min-height: 100vh;
+    color: $clr-neutral-800;
+}
+
+.container-dark {
+    padding-inline: $sz-240;
+    background-color: $clr-neutral-800;
+    background-image: url('../../images/pattern-background-mobile-dark.svg');
+    min-height: 100vh;
+    
+
+    & * {
+        color: $clr-neutral-100 !important ;
+        
+    }
+
+    li {
+        background-color: $clr-neutral-700;
+    }
+
+    
+    h3 span {
+       color: $clr-neutral-600 !important;
+    }
+}

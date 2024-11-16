@@ -1,0 +1,31 @@
+@use "./variables" as *;
+
+@mixin page-title-font {
+    color: $clr-neutral-800;
+    font-family: $ff-primary;
+    font-size: $fs-180;
+    font-weight: $fw-medium;
+
+    
+}
+
+@mixin home-header-font {
+    color: $clr-neutral-800;
+    font-family: $ff-primary;
+    font-size: $fs-400;
+    font-weight: $fw-light;
+}
+
+@mixin info {
+    color: $clr-neutral-800;
+    font-family: $ff-secondary;
+    font-size: $fs-140;
+    font-style: italic;
+}
+
+@mixin box-text {
+    color: $clr-neutral-800;
+    font-family: $ff-secondary;
+    font-size: $fs-180;
+    font-weight: $fw-medium;
+}

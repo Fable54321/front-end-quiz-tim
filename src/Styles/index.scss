@@ -1,0 +1,12 @@
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as m;
+@use './abstracts/reset';
+
+
+
+._container-dark_17wuy_19 {
+    
+    ._quizz__question-container__decoration_r1zz5_25{
+        background-color: $clr-neutral-700;
+    }
+}

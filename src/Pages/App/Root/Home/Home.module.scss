@@ -1,0 +1,96 @@
+@use '../../../../Styles/abstracts/variables' as *;
+@use '../../../../Styles/abstracts/mixins' as m;
+
+
+.home {
+
+    margin-top: $sz-320;
+
+    &__header {
+
+        &__main {
+            @include m.home-header-font;
+        }
+
+        &__additional-info {
+            margin-top: $sz-160;
+            @include m.info;
+        }
+    }
+
+    &__section {
+        margin-top: $sz-400;
+
+
+
+        &__links {
+
+            display: flex;
+            flex-direction: column;
+            gap: $sz-120;
+
+            @include m.box-text;
+
+            li {
+                background-color: $clr-neutral-100;
+                list-style: none;
+                padding: $sz-120;
+                border-radius: $sz-120;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: $sz-160;
+                    text-decoration: none;
+                    color: inherit;
+
+                    img{
+                        width: 28.57px;
+                        height: 28.57px;
+                    }
+
+                }
+            }
+
+            &__bg-img-1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                background-color: $clr-accent-light-orange;
+                border-radius: 6px;
+            }
+
+            &__bg-img-2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                background-color: $clr-accent-light-green;
+                border-radius: 6px;
+            }
+
+            &__bg-img-3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                background-color: $clr-accent-light-blue;
+                border-radius: 6px;
+            }
+
+            &__bg-img-4 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                background-color: $clr-accent-light-purple;
+                border-radius: 6px;
+            }
+        }
+    }
+}

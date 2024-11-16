@@ -1,0 +1,106 @@
+@use '../Styles/abstracts/variables' as *;
+@use '../Styles/abstracts/mixins' as m;
+
+
+
+.quizz {
+
+    &__header {
+        margin-top: $sz-320;
+        @include m.info;
+    }
+
+    &__question-container {
+        margin-top: $sz-120;
+        @include m.box-text;
+
+        &__decoration{
+            margin-top: $sz-240;
+            padding-inline: 5px;
+            height: 16px;
+            background-color: $clr-neutral-100;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+
+            &__inner{
+                
+                width: 60%;
+                height: 8px;
+                border-radius: 999px;
+                background-color: $clr-accent-purple;
+            }
+        }
+
+        &__answers {
+            margin-top: $sz-400;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            
+            &__option {
+                display: flex;
+                align-items: center;
+                gap: $sz-160;
+                border-radius: $sz-120;
+                background-color: $clr-neutral-100;
+                padding: $sz-120;
+                position: relative;
+
+               &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                left: 0;
+                border-radius: $sz-120;
+               }
+
+                &__marker {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: $sz-60;
+                    width: 40px;
+                    height: 40px;
+                    background-color: $clr-neutral-200;
+
+                    color: $clr-neutral-600;
+                    
+                }
+            }
+           
+        }
+
+                &__submit {
+
+                    display: flex;
+                    justify-content: center;
+        
+                    &__button {
+                        margin-top: $sz-160;
+                        border: none;
+                        background-color: $clr-accent-purple;
+                        color: $clr-neutral-100;
+                        width: 100%;
+                        height: 56px;
+                        border-radius: $sz-120;
+        
+                        margin-inline: auto;
+        
+                        &:active {
+                            transform: translateY(5%);
+                            width: 98%;
+                            height: 54px;
+                        }
+                    }
+                }
+                }
+}
+
+/* Answer choice specific styles */
+
+.answer-selected{
+    border: 3px solid $clr-accent-purple;
+}

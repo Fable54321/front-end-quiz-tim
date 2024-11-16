@@ -1,0 +1,33 @@
+/*colors*/
+/*typography*/
+/*phone*/
+/*tablet*/
+/*desktop*/
+/*spacings*/
+/*mobile*/
+/*tablet*/
+/*desktop*/
+/*extra*/
+.container {
+  padding-inline: 1.5rem;
+  background-color: hsl(220, 38%, 97%);
+  background-image: url("../../images/pattern-background-mobile-light.svg");
+  min-height: 100vh;
+  color: hsl(216, 25%, 25%);
+}
+
+.container-dark {
+  padding-inline: 1.5rem;
+  background-color: hsl(216, 25%, 25%);
+  background-image: url("../../images/pattern-background-mobile-dark.svg");
+  min-height: 100vh;
+}
+.container-dark * {
+  color: hsl(0, 0%, 100%) !important;
+}
+.container-dark li {
+  background-color: hsl(215, 27%, 32%);
+}
+.container-dark h3 span {
+  color: hsl(219, 13%, 44%) !important;
+}/*# sourceMappingURL=App.module.css.map */

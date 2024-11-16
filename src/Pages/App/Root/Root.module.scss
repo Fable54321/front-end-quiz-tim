@@ -1,0 +1,88 @@
+@use '../../../Styles/abstracts/variables' as *;
+@use '../../../Styles//abstracts/mixins' as m;
+
+
+.header {
+    padding-top: $sz-160;
+    padding-bottom: $sz-160;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   
+ 
+    
+
+    &__page-title {
+        @include m.page-title-font;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
+        img {
+            width: 40px;
+            height: 40px;
+            
+        }
+      
+    }
+
+    &__theme-switch {
+
+       
+        display: flex;
+        align-items: center;
+        gap: $sz-80;
+
+        img {
+            width: $sz-160;
+            height: $sz-160;
+        }
+
+
+        &__button {
+           width: $sz-320;
+           height: $sz-200;
+           background-color: $clr-accent-purple;
+           border: none;
+           border-radius: 999px;
+           position: relative; 
+           
+
+           &:hover {
+            cursor: pointer;
+           }
+
+           &__handle-off {
+            
+            width: 12px;
+            height: 12px;
+            background-color: $clr-neutral-100;
+            border-radius: 100vw;
+            position: absolute;
+            top: 50%;
+            left:8%;
+            transform: translateY(-50%);
+            transition: left 750ms;
+           }
+
+
+           &__handle-on {
+            
+            width: 12px;
+            height: 12px;
+            background-color: $clr-neutral-100;
+            border-radius: 100vw;
+            position: absolute;
+            top: 50%;
+            left: 73%;
+            transform: translate(-50%,-50%);
+            
+            
+            transition: left 750ms;
+           }
+        }
+    }
+}
+
+
+ 
