@@ -130,7 +130,7 @@ const Question = ({ darkTheme, currentQuizz, currentScore, setCurrentScore, sect
       <>
         <section className={styles.quizz}>
           <div className={styles["quizz__header"]}>
-           <h3> Question {page + 1} out of 10 </h3>
+           <h3 className={!darkTheme ? "": styles["quizz__header-dark"]} > Question {page + 1} out of 10 </h3>
             <div>
               <h3 className={styles["quizz__header__question"]}>
                 {questions[page].question}
@@ -253,6 +253,7 @@ const Question = ({ darkTheme, currentQuizz, currentScore, setCurrentScore, sect
   } else {
     return (
       <FinalScore
+        darkTheme= {darkTheme}
         section={section}
         title={currentQuizz.title}
         currentScore={currentScore}

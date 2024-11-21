@@ -16,7 +16,7 @@
         margin-top: $sz-320;
         @include m.home-header-font;
 
-        
+      
 
         &__bottom {
             font-weight: $fw-medium;
@@ -31,6 +31,11 @@
         align-items: center;
 
         margin-top: $sz-400;
+
+        @media only screen and (min-width: $min-width-tablet ) and (max-width: $min-width-desktop){
+            margin-top: $sz-640;
+            gap: $sz-320;
+        }
 
         @media(min-width: $min-width-desktop){
             gap: $sz-320;
@@ -47,7 +52,7 @@
             border-radius: $sz-120;
             width: 100%;
 
-            @media(min-width: $min-width-desktop){
+            @media(min-width: $min-width-tablet){
                 border-radius: $sz-240;
                 padding: $sz-480;
                 gap: $sz-400;
@@ -110,23 +115,51 @@
             &__score {
                 font-family: $ff-secondary;
                 font-size: $fs-180;
-                font-weight: $fw-regular;
+                font-weight: $fw-light;
                 text-align: center;
-                
+                color: $clr-neutral-600;
 
-                @media(min-width: $min-width-desktop){
+                @media(min-width: $min-width-tablet){
                     font-size: $sz-240;
                 }
 
                 &__personnal {
                     font-size: $fs-880;
                     font-weight: $fw-medium;
+                    color: $clr-neutral-800;
 
-                    @media(min-width: $min-width-desktop){
+                    @media(min-width: $min-width-tablet){
                         
                         font-size: $fs-1440;
                     }
                 }
+
+                
+            }
+
+            &__score-dark {
+
+                font-family: $ff-secondary;
+                font-size: $fs-180;
+                font-weight: $fw-light;
+                text-align: center;
+                color: $clr-neutral-300 !important;
+
+                @media(min-width: $min-width-tablet){
+                    font-size: $sz-240;
+                }
+
+                &__personnal {
+                    font-size: $fs-880;
+                    font-weight: $fw-medium;
+                    color: $clr-neutral-100;
+
+                    @media(min-width: $min-width-tablet){
+                        
+                        font-size: $fs-1440;
+                    }
+                }
+
             }
         }
 
@@ -140,10 +173,18 @@
             width: 100%;
             height: 56px;
 
+            @media only screen and (min-width: $min-width-tablet ) and (max-width: $min-width-desktop){
+                height: inherit;
+                padding: $sz-320;
+                border-radius: $sz-240;  
+            }
+
             @media(min-width: $min-width-desktop){
                 height: inherit;
                 padding: $sz-320;
                 border-radius: $sz-240;
+
+               
 
                 &:hover {
                     cursor: pointer;

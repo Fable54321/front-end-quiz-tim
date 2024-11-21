@@ -44,6 +44,12 @@
   align-items: center;
   margin-top: 2.5rem;
 }
+@media only screen and (min-width: 33.4375em) and (max-width: 64em) {
+  .FinalScore__main {
+    margin-top: 4rem;
+    gap: 2rem;
+  }
+}
 @media (min-width: 64em) {
   .FinalScore__main {
     gap: 2rem;
@@ -60,7 +66,7 @@
   border-radius: 0.75rem;
   width: 100%;
 }
-@media (min-width: 64em) {
+@media (min-width: 33.4375em) {
   .FinalScore__main__result {
     border-radius: 1.5rem;
     padding: 3rem;
@@ -130,10 +136,11 @@
 .FinalScore__main__result__score {
   font-family: "Rubik", "helvetica";
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
+  color: hsl(219, 13%, 44%);
 }
-@media (min-width: 64em) {
+@media (min-width: 33.4375em) {
   .FinalScore__main__result__score {
     font-size: 1.5rem;
   }
@@ -141,9 +148,32 @@
 .FinalScore__main__result__score__personnal {
   font-size: 5.5rem;
   font-weight: 500;
+  color: hsl(216, 25%, 25%);
 }
-@media (min-width: 64em) {
+@media (min-width: 33.4375em) {
   .FinalScore__main__result__score__personnal {
+    font-size: 9rem;
+  }
+}
+.FinalScore__main__result__score-dark {
+  font-family: "Rubik", "helvetica";
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-align: center;
+  color: hsl(216, 47%, 78%) !important;
+}
+@media (min-width: 33.4375em) {
+  .FinalScore__main__result__score-dark {
+    font-size: 1.5rem;
+  }
+}
+.FinalScore__main__result__score-dark__personnal {
+  font-size: 5.5rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+}
+@media (min-width: 33.4375em) {
+  .FinalScore__main__result__score-dark__personnal {
     font-size: 9rem;
   }
 }
@@ -168,6 +198,13 @@
 @media (min-width: 64em) {
   .FinalScore__main__button {
     font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 33.4375em) and (max-width: 64em) {
+  .FinalScore__main__button {
+    height: inherit;
+    padding: 2rem;
+    border-radius: 1.5rem;
   }
 }
 @media (min-width: 64em) {

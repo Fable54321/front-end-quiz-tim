@@ -6,7 +6,7 @@ import javascript from '../../../../images/icon-js.svg'
 import accessibility from '../../../../images/icon-accessibility.svg'
 import { useNavigate } from 'react-router-dom'
 
-const FinalScore = ({ currentScore, title, section, setPage }) => {
+const FinalScore = ({ darkTheme ,currentScore, title, section, setPage }) => {
 
     console.log(section);
 
@@ -38,8 +38,10 @@ const FinalScore = ({ currentScore, title, section, setPage }) => {
                         <img src={imagesSrc[section]} alt='' aria-hidden="true" /></div>
                         <h3>{title}</h3>
                     </div>
-                <p className={styles['FinalScore__main__result__score']}>
-                    <span className={styles['FinalScore__main__result__score__personnal']}>{currentScore}</span>
+                <p className={!darkTheme?  styles['FinalScore__main__result__score']: styles['FinalScore__main__result__score-dark']}>
+                        
+                    <span className={!darkTheme? styles['FinalScore__main__result__score__personnal']: styles['FinalScore__main__result__score-dark__personnal']}>
+                        {currentScore}</span>
                     <br/>out of 10</p>
             </div>
             <button onClick={()=>{ 

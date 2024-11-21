@@ -23,15 +23,15 @@ function App() {
   const [darkTheme, setDarkTheme] = useState(isDarkPreferred ? true : false);
 
 
-  const url = 'https://jsonkeeper.com/b/31LH';
+  const url = 'https://mocki.io/v1/edcd3a66-09f1-4451-87df-08e74b13bf17';
   
 function callData() {
   fetch(url)
   .then((res) => res.json())
   .then((data) =>{
 
-    console.log(data);
-    setQuizzes(data);
+   
+    setQuizzes(data.quizzes);
     
   })
   .catch(console.error);

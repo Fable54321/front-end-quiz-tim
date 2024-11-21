@@ -34,6 +34,9 @@
     font-size: 1.25rem;
   }
 }
+.quizz__header-dark {
+  color: hsl(216, 47%, 78%) !important;
+}
 @media only screen and (min-width: 33.4375em) and (max-width: 64em) {
   .quizz__header {
     margin-top: 3.0625rem;
@@ -252,6 +255,10 @@
 /* Answer choice specific styles */
 .answer-selected {
   border: 3px solid hsl(277, 91%, 56%);
+}
+.answer-selected:hover .quizz__question-container__answers__option__marker {
+  background-color: hsl(277, 91%, 56%);
+  color: hsl(0, 0%, 100%) !important;
 }
 .answer-selected .quizz__question-container__answers__option__marker {
   background-color: hsl(277, 91%, 56%);
