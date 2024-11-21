@@ -8,26 +8,66 @@
 /*tablet*/
 /*desktop*/
 /*extra*/
+/* queries */
+/*content widths*/
 .container {
-  padding-inline: 1.5rem;
   background-color: hsl(220, 38%, 97%);
   background-image: url("../../images/pattern-background-mobile-light.svg");
   min-height: 100vh;
   color: hsl(216, 25%, 25%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 33.4375em) and (max-width: 64em) {
+  .container {
+    background-image: url("../../images/pattern-background-tablet-light.svg");
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 64em) {
+  .container {
+    min-width: 100vw;
+    background-image: url("../../images/pattern-background-desktop-light.svg");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .container-dark {
-  padding-inline: 1.5rem;
   background-color: hsl(216, 25%, 25%);
   background-image: url("../../images/pattern-background-mobile-dark.svg");
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.container-dark * {
-  color: hsl(0, 0%, 100%) !important;
+@media only screen and (min-width: 33.4375em) and (max-width: 64em) {
+  .container-dark {
+    background-image: url("../../images/pattern-background-tablet-dark.svg");
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 64em) {
+  .container-dark {
+    min-width: 100vw;
+    background-image: url("../../images/pattern-background-desktop-dark.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container-dark h1, .container-dark h2, .container-dark h3, .container-dark h4, .container-dark p, .container-dark a {
+  color: hsl(0, 0%, 100%);
 }
 .container-dark li {
   background-color: hsl(215, 27%, 32%);
+  color: hsl(0, 0%, 100%);
 }
-.container-dark h3 span {
-  color: hsl(219, 13%, 44%) !important;
+.container-dark [data-type=dark] {
+  background-color: hsl(215, 27%, 32%);
 }/*# sourceMappingURL=App.module.css.map */

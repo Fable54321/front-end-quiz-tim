@@ -1,0 +1,277 @@
+@use '../../../../Styles/abstracts/variables' as *;
+@use '../../../../Styles/abstracts/mixins' as m;
+
+
+
+.quizz {
+
+    @media(min-width: $min-width-desktop){
+        width: $desktop-width;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__header {
+        margin-top: $sz-320;
+        @include m.info;
+
+        @media only screen and (min-width: $min-width-tablet ) and (max-width: $min-width-desktop){
+            margin-top: $sz-490;
+        }
+
+        @media(min-width: $min-width-desktop){
+            width: 40.05%
+        }
+
+        &__question {
+            @include m.question;
+            
+            
+
+            @media(min-width: $min-width-tablet){
+                margin-top: $sz-270;
+            }
+            
+        }
+
+        
+
+        &__decoration{
+            margin-top: $sz-240;
+            padding-inline: 5px;
+            height: 16px;
+            background-color: $clr-neutral-100;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+
+            @media only screen and (min-width: $min-width-tablet ) and (max-width: $min-width-desktop){
+                margin-top: $sz-400;
+            }
+
+            @media(min-width: $min-width-desktop){
+                margin-top: $sz-1640;
+            }
+
+            &__inner{
+                
+                width: 60%;
+                height: 8px;
+                border-radius: 999px;
+                background-color: $clr-accent-purple;
+            }
+        }
+    }
+
+    &__question-container {
+
+        margin-top: $sz-120;
+        @include m.box-text;
+
+        
+
+        @media(min-width: $min-width-desktop){
+            width: 48.57%
+
+        }
+
+        
+
+        &__answers {
+            margin-top: $sz-400;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            @media only screen and (min-width: $min-width-tablet ) and (max-width: $min-width-desktop){
+                margin-top: $sz-640;
+                gap: $sz-240;
+            }
+
+            @media(min-width: $min-width-desktop){
+                margin-top: 0;
+                gap: $sz-240;
+            }
+            
+            &__option {
+                display: flex;
+                align-items: center;
+                gap: $sz-160;
+                border-radius: $sz-120;
+                background-color: $clr-neutral-100;
+                padding: $sz-120;
+                position: relative;
+
+                @media only screen and (min-width: $min-width-tablet ) and (max-width: $min-width-desktop){
+                    gap: $sz-320;
+                    border-radius: $sz-240;
+                }
+
+                @media(min-width: $min-width-desktop){
+                    padding: $sz-200 $fs-180;
+                    gap: $sz-320;
+                    border-radius: $sz-240;
+
+                  
+                }
+
+               &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                left: 0;
+                border-radius: $sz-120;
+
+               }
+
+              
+               
+
+                &__marker {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: $sz-60;
+                    min-width: 40px ;
+                    min-height: 40px ;
+                    background-color: $clr-neutral-200;
+
+                    color: $clr-neutral-600 !important;
+
+                    @media(min-width: $min-width-tablet){
+                        height: 56px;
+                        width: 56px;
+                        border-radius: $sz-120;
+                    }
+                    
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+
+                    .quizz__question-container__answers__option__marker {
+                        background-color: $clr-accent-light-purple;
+                        
+                       
+                            color: $clr-accent-purple !important;
+                        
+                    }
+                }
+
+                img{
+                    position: absolute;
+                    right: 3.67%;
+                }
+            }
+            
+           
+        }
+
+                &__submit {
+
+                    display: flex;
+                    justify-content: center;
+        
+                    &__button {
+                        margin-top: $sz-160;
+                        border: none;
+                        background-color: $clr-accent-purple;
+                        color: $clr-neutral-100;
+                        width: 100%;
+                        height: 56px;
+                        border-radius: $sz-120;
+        
+                        margin-inline: auto;
+
+                        @media only screen and (min-width: $min-width-tablet ) and (max-width: $min-width-desktop){
+                            margin-top: $sz-320;
+                            height: 92px;
+                            border-radius: $sz-240;
+                        }
+
+                        @media(min-width: $min-width-desktop){
+                            margin-top: $sz-320;
+                            height: 92px;
+                            border-radius: $sz-240;
+
+                            &:hover {
+                                cursor: pointer;
+                                background-color: hsl(277, 91%, 78%);
+                            }
+                        }
+        
+                        &:active {
+                            transform: translateY(5%);
+                            width: 98%;
+                            height: 54px;
+
+                            @media(min-width: $min-width-tablet){
+                                height: 88px;
+                            }
+                        }
+                    }
+                }
+
+                &__no-answer {
+                    margin-top: $sz-120;
+                    display: flex;
+                    justify-content: center;
+                    gap: $sz-80;
+                    align-items: center;
+                    width: 100%;
+                    color: $clr-accent-red;
+
+                    img{
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    p{
+                        transform: translateY(0%);
+                    }
+                    
+                }
+
+                }
+
+
+}
+
+/* Answer choice specific styles */
+
+
+
+.answer-selected{
+    border: 3px solid $clr-accent-purple;
+    
+    .quizz__question-container__answers__option__marker{
+        background-color: $clr-accent-purple;
+        color: $clr-neutral-100 !important;
+    }
+}
+
+.answer-selected-good { 
+    border: 3px solid $clr-accent-green;
+}
+
+.answer-selected-wrong {
+    border: 3px solid $clr-accent-red;
+}
+
+.answer-unselected {
+    border: none;
+}
+
+
+.marker-good {
+    background-color: $clr-accent-green !important;
+    color: $clr-neutral-100;
+}
+
+.marker-bad {
+    background-color: $clr-accent-red !important;
+    color: $clr-neutral-100;
+} 

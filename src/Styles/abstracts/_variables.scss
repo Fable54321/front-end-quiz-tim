@@ -75,7 +75,7 @@ $sz-640: 4rem;
 
 
 /*desktop*/
-
+$sz-140: .875rem;
 $sz-240: 1.5rem;
 $sz-270: 1.6875rem;
 $sz-480: 3rem;
@@ -90,4 +90,11 @@ $sz-200: 1.25rem;
 
 
 
+/* queries */
 
+$min-width-tablet: 33.4375em;
+$min-width-desktop: 64em;
+
+/*content widths*/
+
+$desktop-width: clamp(1000px, 80.555555555vw, 1250px);

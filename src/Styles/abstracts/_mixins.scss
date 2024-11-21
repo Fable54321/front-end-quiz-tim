@@ -1,26 +1,69 @@
 @use "./variables" as *;
 
-@mixin page-title-font {
-    color: $clr-neutral-800;
-    font-family: $ff-primary;
-    font-size: $fs-180;
-    font-weight: $fw-medium;
-
-    
-}
 
 @mixin home-header-font {
     color: $clr-neutral-800;
     font-family: $ff-primary;
     font-size: $fs-400;
     font-weight: $fw-light;
+
+    @media(min-width: $min-width-tablet){
+        font-size: $fs-640;
+    }
+
+   
+    @media(min-width: $min-width-desktop){
+        font-size: $fs-640;
+    }
 }
 
-@mixin info {
+@mixin page-title-font {
     color: $clr-neutral-800;
+    font-family: $ff-primary;
+    font-size: $fs-180;
+    font-weight: $fw-medium;
+
+    @media(min-width: $min-width-tablet){
+        font-size: $fs-280;
+    }
+
+    @media(min-width: $min-width-desktop){
+        font-size: $fs-280;
+    }
+    
+}
+
+@mixin question {
+    color: $clr-neutral-800;
+    font-family: $ff-primary;
+    font-size: $fs-200;
+    font-weight: $fw-medium;
+    font-style: normal;
+    
+    @media(min-width: $min-width-tablet){
+        font-size: $fs-360;
+    }
+
+    @media(min-width: $min-width-desktop){
+        font-size: $fs-360;
+    }
+}
+
+
+
+@mixin info {
+    color: $clr-neutral-600;
     font-family: $ff-secondary;
     font-size: $fs-140;
     font-style: italic;
+
+    @media(min-width: $min-width-tablet){
+        font-size: $fs-200;
+    }
+
+    @media(min-width: $min-width-desktop){
+        font-size: $fs-200;
+    }
 }
 
 @mixin box-text {
@@ -28,4 +71,12 @@
     font-family: $ff-secondary;
     font-size: $fs-180;
     font-weight: $fw-medium;
+
+    @media(min-width: $min-width-tablet){
+        font-size: $fs-280;
+    }
+
+    @media(min-width: $min-width-desktop){
+        font-size: $fs-280;
+    }
 }

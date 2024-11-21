@@ -1,30 +1,34 @@
-import { useContext, useEffect } from "react"
-import Question from "../../../../../Components/Question"
-import { quizzContext } from "../../../../../Contexts/quizzContext"
-import { sectionContext } from "../../../../../Contexts/sectionContext";
-
-
-
-const Html = () => {
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react"
+import Question from '../../../Components/Question/Question'
 
 
 
 
-  const htmlQuizzes = useContext(quizzContext)[0];
 
-  const section = useContext(sectionContext)[0];
-  const setSection = useContext(sectionContext)[1];
+const Html = ({ darkTheme, section ,setSection ,quizzes }) => {
 
-  console.log(htmlQuizzes);
+useEffect(() => {
+  setSection(0);
+},[])
 
-  useEffect(() => {
-    setSection(0);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+
+const htmlObject = quizzes[0];
+
+
+const [htmlScore, setHtmlScore] = useState(0);
+
+ 
+   
+
  
   return (
     <div>
-      <Question section={section} quizzes={htmlQuizzes}  />
+      
+      
+
+       <Question darkTheme={darkTheme} section={section} currentQuizz={htmlObject} currentScore={htmlScore} setCurrentScore={setHtmlScore}  /> 
+     
     </div>
   )
 }

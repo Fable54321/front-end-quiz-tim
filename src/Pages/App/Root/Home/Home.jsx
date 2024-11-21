@@ -1,6 +1,5 @@
-import { useContext, useEffect } from 'react'
-import { sectionContext } from '../../../../Contexts/sectionContext'
-import { quizzContext } from '../../../../Contexts/quizzContext'
+/* eslint-disable react/prop-types */
+import { useEffect } from 'react'
 import html from '../../../../images/icon-html.svg'
 import css from '../../../../images/icon-css.svg'
 import javascript from '../../../../images/icon-js.svg'
@@ -8,10 +7,9 @@ import accessibility  from '../../../../images/icon-accessibility.svg'
 import styles from './Home.module.css'
 import { Link } from 'react-router-dom'
 
-const Home = () => {
+const Home = ({ setSection }) => {
 
-  const section = useContext(sectionContext)[0];
-  const setSection = useContext(sectionContext)[1];
+
 
   useEffect(()=> {
     setSection(-1);
@@ -24,7 +22,7 @@ const Home = () => {
     <div className={styles.home}>
       <header className={styles["home__header"]}>
         <h1 className={styles["home__header__main"]}>
-          Welcome to the Frontend Quiz
+          Welcome to the <br/><span>Frontend Quiz!</span>
         </h1>
         <h2 className={styles["home__header__additional-info"]}>
           Pick a subject to get started
@@ -36,13 +34,13 @@ const Home = () => {
             <Link to={"/html"}><div className={styles['home__section__links__bg-img-1']}><img src={html} alt='' aria-hidden="true"/></div> HTML</Link>
           </li>
           <li>
-            <Link><div className={styles['home__section__links__bg-img-2']}><img src={css} alt='' aria-hidden="true"/></div>CSS</Link>
+            <Link to={'/css'}><div className={styles['home__section__links__bg-img-2']}><img src={css} alt='' aria-hidden="true"/></div>CSS</Link>
           </li>
           <li>
-            <Link><div className={styles['home__section__links__bg-img-3']}><img src={javascript} alt='' aria-hidden="true"/></div>Javascript</Link>
+            <Link to={'/javascript'} ><div className={styles['home__section__links__bg-img-3']}><img src={javascript} alt='' aria-hidden="true"/></div>Javascript</Link>
           </li>
           <li>
-            <Link><div className={styles['home__section__links__bg-img-4']}><img src={accessibility} alt='' aria-hidden="true"/></div>Accessibility</Link>
+            <Link to={'/accessibility'} ><div className={styles['home__section__links__bg-img-4']}><img src={accessibility} alt='' aria-hidden="true"/></div>Accessibility</Link>
           </li>
         </ul>
       </section>

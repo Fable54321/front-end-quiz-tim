@@ -8,6 +8,8 @@
 /*tablet*/
 /*desktop*/
 /*extra*/
+/* queries */
+/*content widths*/
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -47,7 +49,4 @@ p {
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
   }
-}
-._container-dark_17wuy_19 ._quizz__question-container__decoration_r1zz5_25 {
-  background-color: hsl(215, 27%, 32%);
 }/*# sourceMappingURL=index.css.map */
