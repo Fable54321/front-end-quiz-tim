@@ -13,6 +13,7 @@
 .container {
   background-color: hsl(220, 38%, 97%);
   background-image: url("../../images/pattern-background-mobile-light.svg");
+  background-size: cover;
   min-height: 100vh;
   color: hsl(216, 25%, 25%);
   display: flex;
