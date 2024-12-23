@@ -23,7 +23,7 @@ function App() {
   const [darkTheme, setDarkTheme] = useState(isDarkPreferred ? true : false);
 
 
-  const url = 'https://mocki.io/v1/edcd3a66-09f1-4451-87df-08e74b13bf17';
+  const url = 'https://mocki.io/v1/fdf1750e-5d5e-4f9c-a8e7-fc83e9e5cb54';
   
 function callData() {
   fetch(url)
